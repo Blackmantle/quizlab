@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "max-len": ["error", {
+      "code": 110
+    }],
+    "import/order": 0,
+    "import/prefer-default-export": 0,
+    "linebreak-style": 0,
+    "no-param-reassign": 0,
+    "react/jsx-props-no-spreading": 0,
+    "object-curly-newline": ["error", {
+      "ObjectPattern": { "multiline": true, "minProperties": 5 }
+    }],
+    "no-nested-ternary": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": 0
+  }
+}
